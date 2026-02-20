@@ -1,4 +1,4 @@
-# SpilloverGS model (0D overtopping–breach model)
+# SpilloverGS model (0D overtopping breach model)
 
 'SpilloverGS' is a lightweight 0D numerical model to simulate 'overtopping-driven breach erosion' of a dam (e.g., landslide dam / natural dam) and the resulting flood hydrograph
 
