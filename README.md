@@ -11,7 +11,7 @@ SpilloverGS is designed to calculate and simulate 'overtopping breach processes'
 - lake level / lake storage,
 - breach discharge,
 - breach widening,
-- vertical incision rate (erosion rate)
+- incision rate
 
 2. Key features
 
