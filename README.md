@@ -54,6 +54,8 @@ SpilloverGS is designed to calculate and simulate 'overtopping breach processes'
 
 4. How to run
 
- (1) Make sure `SpilloverGS_code.py` and `SpilloverGS_params.txt` are in the same folder.
- (2) Edit numbers in `SpilloverGS_params.txt` (do not change parameter names).
+ (1) Make sure `SpilloverGS_code.py` and `SpilloverGS_params.txt` are in the same folder
+ 
+ (2) Edit numbers in `SpilloverGS_params.txt` (do not change parameter names)
+ 
  (3) Run: bash python SpilloverGS_code.py
