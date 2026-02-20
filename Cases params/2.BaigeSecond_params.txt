@@ -1,0 +1,155 @@
+# This is 'SpilloverGS' input parameters file
+# !!!!Please donot make any modifications others than numbers!!!!
+# This is a parameter case of Baige second outburst flood
+
+
+# =====Initial parameters=====
+
+Dam initial elevation(m): z_sill0 = 2969.0
+Dam final elevation(m):   z_sill_min = 2870.0
+Lake initial elevation(m): z_l0 = 2971.0
+Lake bottom elevation(m):  z_bed = 2870.0
+Dam length(m): L_dam = 1200.0
+Initial breach width(m): W0 = 5.0
+Inlet discharge(m^3/s): Qin = 800.0
+Grain size(m): D = 0.014
+Empirical parameter(-): ap = 0.000012
+Breach total time(h): tmax = 40.0
+Calculate time step(s): dt = 30.0
+
+
+# ==== Export results file====
+# 0 = do NOT export
+# 1 = export results to file "Export results.txt", including 'Time (h)', 'Lake Elevation (m)', 'Discharge (m^3/s)', 'Breach Width (m)', 'Incision Rate dzs/dt (m/s)'
+export_results = 1
+
+
+
+# ====Selection of flow velocity formula====
+
+# Two formulars are provided to calculate the breach flow velocity
+# 0：Manning's formular: U = n^(-1)*h（2/3）*S(1/2)
+# 1: Critical flow formular: U = (g*h)^0.5
+flow_velocity_mode = 0
+
+
+# ====Initial lake information====
+
+# Two modes are provided of intical lake information as follows.
+# 0: read 'Lake Level_z - Storage_V Data (z-V)' block below; 
+# 1: build z-V from initial lake area A0
+lake_infor_mode = 0
+
+
+# Only used when 'lake_infor_mode = 1'
+# A0 unit: (m^2)
+A0 = 2.072e7
+ 
+
+
+# lake_shape_mode (only used when lake_infor_mode = 1):
+# 0: linear (A increases linearly from 0 at z_bed to A0 at z_l0, then stays A0)
+# 1: box-like (A is constant A0 for all levels,assumed the geometry of the lake is a cuboid)
+lake_shape_mode = 0
+
+
+#=====Lake Level_z - Storage_V Data (z-V) ====
+# Data sequence must be monotonically increasing!!!
+# z(m) V(m^3)
+2880.33	2476560
+2881.6	3245470
+2882.87	4261300
+2884.12	6758210
+2885.33	10242000
+2886.58	13479600
+2887.85	16223800
+2889.1	18967700
+2890.35	21711500
+2891.6	24702200
+2892.83	27939500
+2894.08	31424000
+2895.31	35402000
+2896.55	39133100
+2897.8	42864600
+2899.03	46595700
+2900.26	50573700
+2901.47	55045100
+2902.69	59763400
+2903.92	64235300
+2905.15	68954000
+2906.35	74165800
+2907.56	79377900
+2908.76	84589700
+2909.97	90295700
+2911.15	96741700
+2912.33	102941000
+2913.53	109140000
+2914.71	115586000
+2915.87	122525000
+2917.05	129465000
+2918.21	136652000
+2919.35	144084000
+2920.48	152257000
+2921.6	160678000
+2922.73	168851000
+2923.84	177270000
+2924.94	185937000
+2926.03	194850000
+2927.14	203764000
+2928.23	212924000
+2929.29	222577000
+2930.34	232477000
+2931.38	242376000
+2932.42	252770000
+2933.45	262916000
+2934.47	273062000
+2935.48	283702000
+2936.44	295081000
+2937.43	306214000
+2938.43	317348000
+2939.43	328234000
+2940.4	339861000
+2941.33	351980000
+2942.26	364100000
+2943.19	376219000
+2944.12	388092000
+2945.02	400457000
+2945.9	413316000
+2946.78	425928000
+2947.67	438541000
+2948.53	451399000
+2949.39	464258000
+2950.27	477117000
+2951.11	490469000
+2951.94	503821000
+2952.77	517173000
+2953.61	530525000
+2954.42	544123000
+2955.22	557968000
+2956.01	572060000
+2956.79	586151000
+2957.58	600242000
+2958.38	613841000
+2959.18	627685000
+2959.95	641777000
+2960.68	656361000
+2961.42	670698000
+2962.18	685036000
+2962.91	699620000
+2963.63	714204000
+2964.35	728541000
+2965.06	743372000
+2965.76	758202000
+2966.46	773032000
+2967.14	787862000
+2967.83	802692000
+2968.53	817523000
+2969.21	832353000
+2969.86	847429000
+2970.53	862753000
+2971.21	877829000
+2971.88	892906000
+2972.51	908229000
+2973.16	923552000
+2973.81	938875000
+2974.44	954444000
