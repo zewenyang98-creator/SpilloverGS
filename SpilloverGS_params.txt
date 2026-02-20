@@ -1,0 +1,101 @@
+# This is 'SpilloverGS' input parameters file
+# !!!!Please donot make any modifications others than numbers!!!!
+# This is a parameter case of Walder's experiment 4 outburst flood
+
+
+# =====Initial parameters=====
+
+Dam initial elevation(m): z_sill0 = 0.993
+Dam final elevation(m):   z_sill_min = 0.6
+Lake initial elevation(m): z_l0 = 1.0
+Lake bottom elevation(m):  z_bed = -0.15
+Dam length(m): L_dam = 2.0
+Initial breach width(m): W0 = 0.01
+Inlet discharge(m^3/s): Qin = 0.0
+Grain size(m): D = 0.00021
+Empirical parameter(-): ap = 0.00008
+Breach total time(h): tmax = 0.1
+Calculate time step(s): dt = 0.001
+
+
+# ==== Export results file====
+# 0 = do NOT export
+# 1 = export results to file "Export results.txt", including 'Time (h)', 'Lake Elevation (m)', 'Discharge (m^3/s)', 'Breach Width (m)', 'Incision Rate dzs/dt (m/s)'
+export_results = 0
+
+
+
+# ====Selection of flow velocity formula====
+
+# Two formulars are provided to calculate the breach flow velocity
+# 0：Manning's formular: U = n^(-1)*h（2/3）*S(1/2)
+# 1: Critical flow formular: U = (g*h)^0.5
+flow_velocity_mode = 0
+
+
+# ====Initial lake information====
+
+# Two modes are provided of intical lake information as follows.
+# 0: read 'Lake Level_z - Storage_V Data (z-V)' block below; 
+# 1: build z-V from initial lake area A0
+lake_infor_mode = 1
+
+
+# Only used when 'lake_infor_mode = 1'
+# A0 unit: (m^2)
+A0 = 3.650e+01
+ 
+
+
+# lake_shape_mode (only used when lake_infor_mode = 1):
+# 0: linear (A increases linearly from 0 at z_bed to A0 at z_l0, then stays A0)
+# 1: box-like (A is constant A0 for all levels,assumed the geometry of the lake is a cuboid)
+lake_shape_mode = 0
+
+
+#======Lake Level_z - Storage_V Data (z-V) ====
+# Data sequence must be monotonically increasing!!!
+# z(m) V(m^3)
+0.16	0.02
+0.18	0.05
+0.20	0.12
+0.22	0.20
+0.24	0.30
+0.26	0.41
+0.28	0.55
+0.30	0.70
+0.32	0.88
+0.34	1.06
+0.36	1.27
+0.38	1.49
+0.40	1.73
+0.42	2.00
+0.44	2.28
+0.46	2.58
+0.48	2.90
+0.50	3.22
+0.52	3.56
+0.54	3.90
+0.56	4.25
+0.58	4.60
+0.60	4.97
+0.62	5.33
+0.64	5.70
+0.66	6.08
+0.68	6.46
+0.70	6.84
+0.72	7.23
+0.74	7.62
+0.76	8.03
+0.78	8.43
+0.80	8.84
+0.82	9.26
+0.84	9.69
+0.86	10.11
+0.88	10.55
+0.90	10.99
+0.92	11.44
+0.94	11.89
+0.96	12.34
+0.98	12.74
+1.00	13.15
